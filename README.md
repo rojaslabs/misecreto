@@ -6,4 +6,4 @@ Secrets also have a like counter, which is restricted to 1 like via localstorage
 
 There are filters, to sort the secrets by "most recent", "most popular" and "most commented".
 
-[Live preview](#)
+[Live preview](http://ec2-3-90-44-172.compute-1.amazonaws.com/)
