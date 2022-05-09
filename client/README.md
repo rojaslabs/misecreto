@@ -1,13 +1,3 @@
-# Description and Live preview
-
-"misecreto" is a MERN fullstack project, users can share secrets anonymously, they can like and comment on them.
-
-Secrets also have a like counter, which is restricted to 1 like via localstorage.
-
-There are filters, to sort the secrets by "most recent", "most popular" and "most commented".
-
-[Live preview](#)
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
