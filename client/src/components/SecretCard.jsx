@@ -76,7 +76,7 @@ const SecretCard = (props) => {
                 <button onClick={() => handleLikes()} ref={buttonRef}><i className="fa-regular fa-heart"></i>{like}</button>
                 <div>
                     {comments.length === 1 && <Link to={`/leer/${id}`}>{comments.length} comentario</Link>} 
-                    {(comments.length === 0 || comments.length > 1 && comments.length < 10) && <Link to={`/leer/${id}`}>{comments.length} comentarios</Link>} 
+                    {((comments.length === 0) || (comments.length > 1)) && comments.length < 10 && <Link to={`/leer/${id}`}>{comments.length} comentarios</Link>} 
                     {comments.length >= 10 && <span><i className="fas fa-fire"></i><Link to={`/leer/${id}`}>{comments.length} comentarios</Link></span>} 
                 </div>
             </div>

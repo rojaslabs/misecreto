@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 import AdminSecretList from '../components/AdminSecretList';
 
@@ -28,7 +27,6 @@ const Administrar = () => {
             <table className='table-admin'>
                 <thead>
                     <tr>
-                        {/* <th>ID</th> */}
                         <th>gender</th>
                         <th>age</th>
                         <th>title</th>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate, Link } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import SecretCard from './SecretCard';
 import CommentList from './CommentList';
@@ -11,7 +11,6 @@ const SecretDetail = () => {
     const [isLoading, setIsLoading] = useState(false);
 
     const { id } = useParams()
-    let navigate = useNavigate()
 
     useEffect(() => {
         getSecret();

@@ -26,9 +26,11 @@ body {
 
 button,
 textarea,
-input {
+input,
+select {
   font-family: 'Roboto', sans-serif;
   transition: all 0.2s ease-in;
+  font-size: 15px;
 }
 
 .container {

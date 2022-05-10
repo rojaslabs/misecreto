@@ -2,7 +2,7 @@ import React from 'react';
 
 const CommentCard = (props) => {
 
-    const { id, content, date } = props;
+    const { content, date } = props;
 
     const formattedDate = new Date(date).toLocaleDateString(
         'es-CL',

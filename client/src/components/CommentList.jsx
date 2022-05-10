@@ -46,7 +46,6 @@ const CommentList = (props) => {
             {updatedComments?.map((comment, i) => (
                 <CommentCard
                     key={i}
-                    id={comment._id}
                     content={comment.content}
                     date={comment.timestamp}
                 />
