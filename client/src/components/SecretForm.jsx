@@ -53,9 +53,15 @@ const SecretForm = () => {
     return (
         <div className='secret-form'>
             <form onSubmit={handleOnSubmit}>
-                <label htmlFor="title">Título (máximo: {25-form.title.length} caracteres)</label>
+                <div className="label-double">
+                    <label htmlFor="title">Título</label>
+                    <div>Máximo: {25 - form.title.length} caracteres</div>
+                </div>
                 <input type="text" name="title" placeholder="¿De qué se trata?" required onChange={handleForm} />
-                <label htmlFor="content">Secreto (máximo: {500-form.content.length} caracteres)</label>
+                <div className="label-double">
+                    <label htmlFor="content">Secreto</label>
+                    <div>Máximo: {500 - form.content.length} caracteres</div>
+                </div>
                 <textarea name="content" rows="10" placeholder='¿Cuál es tu secreto?' required onChange={handleForm} />
                 <label htmlFor="age">Edad</label>
                 <input type="number" name="age" placeholder="¿Cuántos años tienes?" min="5" max="100" required onChange={handleForm} />

@@ -40,7 +40,7 @@ const CommentList = (props) => {
                     <textarea name="comment" value={newComment} onChange={(e) => setNewComment(e.target.value)} minLength={10} rows="2" required placeholder='Mínimo de 10 caracteres' />
                 </div>
                 <div className='actions'>
-                    <button className='btn-comment' type='submit' disabled={newComment.length < 11}>Comentar</button>
+                    <button className='btn-comment' type='submit' disabled={newComment.length < 10}>Comentar</button>
                 </div>
             </form>
             {updatedComments?.map((comment, i) => (

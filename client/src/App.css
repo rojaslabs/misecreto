@@ -1,3 +1,27 @@
+:root {
+  --bg-color: rgb(41, 40, 40);
+  --bg-color-alpha-05: rgba(255, 255, 255, 0.5);
+  --bg-color-alpha-03: rgba(255, 255, 255, 0.3);
+  --bg-color-alpha-01: rgba(255, 255, 255, 0.1);
+  --bg-color-alpha-005: rgba(255, 255, 255, 0.05);
+  --color: white;
+  --color-alpha-05: rgba(255, 255, 255, 0.5);
+  --color-alpha-03: rgba(255, 255, 255, 0.3);
+  --color-alpha-01: rgba(255, 255, 255, 0.1)
+}
+
+body[data-theme="light"] {
+  --bg-color: rgb(255, 255, 255);
+  --bg-color-alpha-05: rgba(41, 40, 40, 0.5);
+  --bg-color-alpha-03: rgba(41, 40, 40, 0.3);
+  --bg-color-alpha-01: rgba(41, 40, 40, 0.1);
+  --bg-color-alpha-005: rgba(41, 40, 40, 0.05);
+  --color: #292828;
+  --color-alpha-05: rgba(0, 0, 0, 0.5);
+  --color-alpha-03: rgba(0, 0, 0, 0.3);
+  --color-alpha-01: rgba(0, 0, 0, 0.1)
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,19 +30,19 @@
 }
 
 a {
-  color: white;
+  color: var(--color);
   text-decoration-color: transparent;
   transition: text-decoration-color 300ms;
 }
 
 a:hover {
-  text-decoration-color: rgba(255, 255, 255, 1);
+  text-decoration-color: var(--color);
 }
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: #292828;
-  color: white;
+  background-color: var(--bg-color);
+  color: var(--color);
   font-weight: 300;
   font-size: 15px;
   margin: 0 20px;
@@ -39,8 +63,13 @@ select {
 }
 
 header {
-  text-align: center;
+  display: flex;
+  justify-content: center;
   padding: 50px 0;
+}
+
+header h1 {
+  justify-content: center;
 }
 
 header i {
@@ -50,6 +79,16 @@ header i {
 
 header .logo-bold {
   font-weight: 300;
+}
+
+.dark-light button {
+  font-weight: 300;
+  font-size: 12px;
+  background-color: transparent;
+  border: none;
+  color: var(--color);
+  margin: 0 5px;
+  cursor: pointer;
 }
 
 h1 {
@@ -71,8 +110,8 @@ nav a {
 
 .breadcrumb {
   padding: 60px 0 15px 0;
-  color: rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--color-alpha-05);
+  border-bottom: 1px solid var(--color-alpha-01);
 }
 
 .container-filters {
@@ -84,8 +123,8 @@ nav a {
 
 .container-filters input {
   background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: white;
+  border: 1px solid var(--color-alpha-03);
+  color: var(--color);
   border-radius: 20px;
   padding: 12px 25px;
   width: 180px;
@@ -93,39 +132,39 @@ nav a {
 
 .container-filters input:focus {
   outline: none;
-  border: 1px solid rgba(255, 255, 255, 1);
+  border: 1px solid var(--color);
   width: 250px;
 }
 
 .container-filters button {
   padding: 10px 20px;
   cursor: pointer;
-  border-radius: 20px;
+  border-radius: 40px;
   background-color: transparent;
   border: none;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--color);
   font-weight: 300;
   text-transform: uppercase;
   font-size: 13px;
 }
 
 .container-filters button:disabled {
-  background-color: white;
-  color: black;
+  background-color: var(--color);
+  color: var(--bg-color);
 }
 
 .text-confesed-secrets {
   font-family: 'Roboto Slab', serif;
   font-size: 16px;
   text-align: center;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--color-alpha-05);
 }
 
 .text-search-match {
   font-family: 'Roboto Slab', serif;
   font-size: 16px;
   text-align: center;
-  color: rgba(255, 255, 255, 1);
+  color: var(--color);
   margin-top: 30px
 }
 
@@ -133,20 +172,16 @@ nav a {
   font-family: 'Roboto Slab', serif;
   font-size: 16px;
   text-align: center;
-  color: rgba(255, 255, 255, 1);
+  color: var(--color);
   margin: 30px 0;
 }
-
-/* .filters {
-  display: flex;
-} */
 
 .secret-card {
   margin: 50px 0;
 }
 
 .secret-card .info {
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--color-alpha-05);
   margin: 20px 0;
   display: flex;
   gap: 10px;
@@ -162,7 +197,7 @@ nav a {
 .secret-card button {
   background-color: transparent;
   border: none;
-  color: white;
+  color: var(--color);
   margin: 20px 0;
   cursor: pointer;
 }
@@ -197,29 +232,33 @@ nav a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--color-alpha-01);
   padding-bottom: 25px
 }
 
 .comment-card textarea {
   background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: white;
+  border: 1px solid var(--color-alpha-03);
+  color: var(--color);
   border-radius: 5px;
   width: 100%;
   padding: 15px;
   resize: vertical;
 }
 
+.comment-card textarea::placeholder {
+  color: var(--bg-color-alpha-03);
+}
+
 .comment-card textarea:focus {
   outline: none;
-  border: 1px solid rgba(255, 255, 255, 1);
+  border: 1px solid var(--color);
 }
 
 .comment-card .btn-comment {
-  border: 1px solid rgba(255, 255, 255, 1);
-  color: black;
-  background-color: white;
+  border: 1px solid var(--bg-color);
+  color: var(--bg-color);
+  background-color: var(--color);
   cursor: pointer;
   padding: 10px 20px;
   border-radius: 5px;
@@ -228,8 +267,8 @@ nav a {
 
 .comment-card .btn-comment:disabled {
   background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--color-alpha-03);
+  color: var(--color-alpha-05);
   cursor: auto;
 }
 
@@ -241,7 +280,7 @@ nav a {
   padding: 15px;
   margin: 20px 0;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.03);
+  background-color: var(--bg-color-alpha-005);
   line-height: 30px;
 }
 
@@ -265,22 +304,38 @@ nav a {
   margin: 20px 0 10px 0;
 }
 
+.secret-form .label-double {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.secret-form .label-double div {
+  color: var(--color-alpha-05);
+}
+
 .secret-form input,
 .secret-form textarea,
 .secret-form select {
   background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  color: white;
+  border: 1px solid var(--color-alpha-03);
+  color: var(--color);
   border-radius: 5px;
   padding: 10px;
   width: 100%;
+}
+
+.secret-form input::placeholder,
+.secret-form textarea::placeholder,
+.secret-form select::placeholder {
+  color: var(--color-alpha-03);
 }
 
 .secret-form input:focus,
 .secret-form textarea:focus,
 .secret-form select:focus {
   outline: none;
-  border: 1px solid rgba(255, 255, 255, 1);
+  border: 1px solid var(--color);
 }
 
 .secret-form .actions {
@@ -290,8 +345,8 @@ nav a {
 }
 
 .secret-form .btn-confess {
-  color: black;
-  background-color: white;
+  color: var(--bg-color);
+  background-color: var(--color);
   border: none;
   cursor: pointer;
   padding: 10px 20px;
@@ -369,7 +424,6 @@ footer {
   font-size: 13px;
   border-collapse: collapse;
   text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .table-admin a {
@@ -378,7 +432,7 @@ footer {
 
 .table-admin td, .table-admin th {
   padding: 10px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--color-alpha-01);
 }
 
 .table-admin button {
