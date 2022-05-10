@@ -81,14 +81,17 @@ header .logo-bold {
   font-weight: 300;
 }
 
+.dark-light {
+  float: right;
+  margin-top: 63px;
+}
+
 .dark-light button {
-  font-weight: 300;
-  font-size: 12px;
   background-color: transparent;
   border: none;
   color: var(--color);
-  margin: 0 5px;
   cursor: pointer;
+  font-size: 20px;
 }
 
 h1 {
@@ -385,10 +388,10 @@ nav a {
   width: 64px;
   height: 64px;
   margin: 8px;
-  border: 8px solid #fff;
+  border: 8px solid var(--color);
   border-radius: 50%;
   animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: #fff transparent transparent transparent;
+  border-color: var(--color) transparent transparent transparent;
 }
 
 .lds-ring div:nth-child(1) {
@@ -442,7 +445,7 @@ footer {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 960px) {
 
   .container {
     width: 100%;
