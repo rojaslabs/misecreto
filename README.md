@@ -10,4 +10,13 @@ Mobile and desktop view available.
 
 I hope to add more features in the future, such as the light/dark theme, login for the administrator user and some tools to analyze the secrets.
 
-[Live preview](http://ec2-3-90-44-172.compute-1.amazonaws.com/)
+## Live preview and screenshots
+
+:point_right: [Live preview](http://ec2-3-90-44-172.compute-1.amazonaws.com/)
+
+![misecreto-preview-1](https://github.com/rojaslabs/misecreto/blob/main/misecreto-preview-1.png?raw=true)
+![misecreto-preview-2](https://github.com/rojaslabs/misecreto/blob/main/misecreto-preview-2.png?raw=true)
+![misecreto-preview-3](https://github.com/rojaslabs/misecreto/blob/main/misecreto-preview-3.png?raw=true)
+![misecreto-preview-4](https://github.com/rojaslabs/misecreto/blob/main/misecreto-preview-4.png?raw=true)
+![misecreto-preview-5](https://github.com/rojaslabs/misecreto/blob/main/misecreto-preview-5.png?raw=true)
+![misecreto-preview-6](https://github.com/rojaslabs/misecreto/blob/main/misecreto-preview-6.png?raw=true)
